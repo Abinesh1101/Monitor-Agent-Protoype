@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>📺 NEWS</h1>
+            </div>
+            <div class="datetime">
+                <span id="current-datetime"></span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Title and Controls -->
+            <div class="title-section">
+                <h2>Live Stream Monitoring</h2>
+                <div class="controls">
+                    <button id="start-btn" class="btn btn-start">Start</button>
+                    <button id="stop-btn" class="btn btn-stop" disabled>Stop</button>
+                </div>
+            </div>
+
+            <!-- Status Bar -->
+            <div class="status-bar" id="status-bar">
+                <div class="status-item">
+                    <span class="status-label">Status:</span>
+                    <span class="status-value" id="monitoring-status">Stopped</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Total Records:</span>
+                    <span class="status-value" id="total-records">0</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Stream:</span>
+                    <span class="status-value" id="stream-url">Not Connected</span>
+                </div>
+            </div>
+
+            <!-- Records Table -->
+            <div class="table-container">
+                <table id="records-table">
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>Video Time Start</th>
+                            <th>Video Time End</th>
+                            <th>Transcript</th>
+                            <th>Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody id="records-tbody">
+                        <!-- Records will be inserted here dynamically -->
+                        <tr class="no-data">
+                            <td colspan="5">No records yet. Click Start to begin monitoring.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-overlay" id="loading-overlay" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Processing stream chunk...</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Monitor Agent Prototype v1.0 | Real-time TV Stream Analysis</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
