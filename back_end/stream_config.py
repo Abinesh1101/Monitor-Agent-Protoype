@@ -20,7 +20,7 @@ os.makedirs(AUDIO_CHUNKS_DIR, exist_ok=True)
 os.makedirs(OUTPUTS_DIR, exist_ok=True)
 
 # Whisper X Configuration (FREE)
-WHISPER_MODEL = "base"  # Options: tiny, base, small, medium, large-v2
+WHISPER_MODEL = "tiny"  # Options: tiny, base, small, medium, large-v2
 DEVICE = "cpu"  # Use "cuda" if you have GPU
 COMPUTE_TYPE = "int8"  # For CPU efficiency
 
@@ -31,3 +31,4 @@ MAX_SUMMARY_LENGTH = 15  # words
 # API Configuration
 FLASK_PORT = 5000
 FLASK_HOST = "0.0.0.0"
+
